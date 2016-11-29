@@ -5,4 +5,12 @@ class UsersController < ApplicationController
     @user.username = params[:username]
     render("users/index.html.erb")
   end
+
+  def show
+    @user = User.find(params[:id])
+  
+
+    render("users/show.html.erb")
+  end
+
 end
